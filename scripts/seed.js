@@ -12,10 +12,9 @@ export default async () => {
       // To try this example data with the UserExample model in schema.prisma,
       // uncomment the lines below and run 'yarn rw prisma migrate dev'
       //
-      // { name: 'alice', email: 'alice@example.com' },
-      // { name: 'mark', email: 'mark@example.com' },
-      // { name: 'jackie', email: 'jackie@example.com' },
-      // { name: 'bob', email: 'bob@example.com' },
+       { name: 'Bank' },
+       { name: 'Broker'},
+       { name: 'Utility'}
     ]
     console.log(
       "\nUsing the default './scripts/seed.{js,ts}' template\nEdit the file to add seed data\n"
@@ -28,7 +27,7 @@ export default async () => {
       // Change to match your data model and seeding needs
       //
       data.map(async (data) => {
-        const record = await db.userExample.create({ data })
+        const record = await db.accountType.create({ data })
         console.log(record)
       })
     )
@@ -40,7 +39,6 @@ export default async () => {
     // just create a temporary admin user
       const users = [
          { name: 'admin', email: 'admin@example.com', password: 'admin' },
-    //     { name: 'jane', email: 'jane@example.com', password: 'secret2' }
        ]
 
        for (const user of users) {
