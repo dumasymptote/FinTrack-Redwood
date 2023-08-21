@@ -18,4 +18,22 @@ model User {
   salt                String
   resetToken          String?
   resetTokenExpiresAt DateTime?
+  accounts            Account[]
+}
+
+model Account {
+  id            Int         @id @default(autoincrement())
+  name          String
+  accountNumber String?
+  user          User        @relation(fields: [userId], references: [id])
+  userId        Int
+  active        Boolean
+  accountType   AccountType @relation(fields: [accountTypeId], references: [id])
+  accountTypeId Int
+}
+
+model AccountType {
+  id      Int       @id @default(autoincrement())
+  name    String
+  Account Account[]
 }
