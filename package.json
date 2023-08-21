@@ -7,7 +7,7 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/auth-auth0-setup": "6.0.7",
+    "@redwoodjs/auth-dbauth-setup": "6.0.7",
     "@redwoodjs/core": "6.0.7"
   },
   "eslintConfig": {
