@@ -3,7 +3,7 @@ const UnauthLayout = ({ children }) => {
   return (
     <>
       <header>
-        <nav>
+        <nav className="">
           <ul>
             <li>
               <Link to={routes.home()}>Home</Link>
@@ -14,7 +14,7 @@ const UnauthLayout = ({ children }) => {
           </ul>
         </nav>
       </header>
-      <div>{children}</div>
+      <main>{children}</main>
     </>
   )
 }
