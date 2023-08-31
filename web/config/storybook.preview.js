@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { MantineProvider } from '@mantine/core'
-import * as theme from 'config/mantine.config'
 /** @type { import("@storybook/csf").GlobalTypes } */
 export const globalTypes = {}
 /**
@@ -14,9 +12,7 @@ const _exampleDecorator = (StoryFn, _context) => {
 }
 const withMantine = (StoryFn) => {
   return (
-    <MantineProvider theme={theme}>
       <StoryFn />
-    </MantineProvider>
   )
 }
 export const decorators = [withMantine]
