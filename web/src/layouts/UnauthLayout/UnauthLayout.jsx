@@ -1,10 +1,10 @@
-import Navbar from "src/components/Navbar/Navbar";
+import Navbar from 'src/components/Navbar/Navbar'
 
 const UnauthLayout = ({ children }) => {
   return (
     <>
       <header>
-        <Navbar/>
+        <Navbar />
       </header>
       <main>{children}</main>
     </>
