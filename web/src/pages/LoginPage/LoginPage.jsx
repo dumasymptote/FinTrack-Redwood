@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate(routes.home())
+      navigate(routes.dashboard())
     }
   }, [isAuthenticated])
 
@@ -52,7 +52,7 @@ const LoginPage = () => {
         <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
         <div className="rw-scaffold rw-login-container">
           <div className="rw-segment">
-            <header className="rw-segment-header">
+            <header className="rw-segment-header bg-slate-800 text-slate-400">
               <h2 className="rw-heading rw-heading-secondary">Login</h2>
             </header>
 
