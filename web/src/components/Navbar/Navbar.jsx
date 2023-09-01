@@ -47,3 +47,9 @@ const Navbar = ({ navigationLinks }) => {
 }
 
 export default Navbar
+
+/*@TODO
+  I need to redo the nav/layout so that there is a single layout page
+  that adjusts the nave based on authentication status. Having the secondary
+  nav causes issues if they navigate to the base '/' route.
+*/
