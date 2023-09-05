@@ -11,6 +11,7 @@ import { Router, Route, Private, Set } from '@redwoodjs/router'
 
 import { useAuth } from './auth'
 import MainLayout from './layouts/MainLayout/MainLayout'
+import UnauthLayout from './layouts/UnauthLayout/UnauthLayout'
 
 const Routes = () => {
   return (
@@ -19,12 +20,14 @@ const Routes = () => {
         <Private unauthenticated="home">
           <Route path="/dashboard" page={DashboardPage} name="dashboard" />
         </Private>
+        <Route path="/" page={HomePage} name="home" />
+        <Route notfound page={NotFoundPage} />
+      </Set>
+      <Set wrap={UnauthLayout}>
         <Route path="/signup" page={SignupPage} name="signup" />
         <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
         <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
         <Route path="/login" page={LoginPage} name="login" />
-        <Route path="/" page={HomePage} name="home" />
-        <Route notfound page={NotFoundPage} />
       </Set>
     </Router>
   )
